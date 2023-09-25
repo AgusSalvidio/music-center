@@ -1,8 +1,15 @@
-# React + Vite
+# Music Center
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<img src="src/assets/logos/logo.png" alt="Logo" width="300" height="100">
 
-Currently, two official plugins are available:
+Music center is the new musical instruments retailer in Argentina. Musical Instruments and Sound Equipment.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Quick links 🚀
+
+- [Report a defect](https://github.com/AgusSalvidio/music-center/issues/new?labels=Type%3A+Defect)
+- [Request a feature](https://github.com/AgusSalvidio/music-center/issues/new?labels=Type%3A+Feature)
+
+## License 📋
+
+- The code is licensed under [MIT](LICENSE).
+- The documentation is licensed under [CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/).
