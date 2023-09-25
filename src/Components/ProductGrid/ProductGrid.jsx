@@ -3,10 +3,10 @@ import ProductCard from "../ProductCard/ProductCard";
 
 const ProductGrid = () => {
   return (
-    <section class="">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
+    <section className="">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12">
             <ProductCard />
           </div>
         </div>
