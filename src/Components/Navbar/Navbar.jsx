@@ -1,11 +1,12 @@
 import React from "react";
 import musicCenterLogo from "../../assets/logos/logo.png";
+import CartWidget from "../CartWidget/CartWidget";
 
 const Navbar = () => {
   return (
     <nav class="navbar navbar-custom navbar-expand-md">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
           <img src={musicCenterLogo} alt="music-center-logo" />
         </a>
         <button
@@ -59,6 +60,11 @@ const Navbar = () => {
                 <a class="nav-link" href="#">
                   Accesorios
                 </a>
+              </li>
+            </ul>
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+              <li class="nav-item">
+                <CartWidget />
               </li>
             </ul>
           </div>
