@@ -2,9 +2,9 @@ import React from "react";
 
 const CartWidget = () => {
   return (
-    <a id="cart" class="nav-link " href="#">
-      <i class="fa-solid fa-cart-shopping"></i>
-      <span id="cart-item-count" class="px-1">
+    <a id="cart" className="nav-link " href="#">
+      <i className="fa-solid fa-cart-shopping"></i>
+      <span id="cart-item-count" className="px-1">
         5
       </span>
     </a>

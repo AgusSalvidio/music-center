@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
+import { useState } from "react";
 
 const QuantityCounter = () => {
-  return (
-    <>QuantityCounter</>
-  )
-}
+  const [quantityCounter, setQuantityCounter] = useState(1);
 
-export default QuantityCounter
+  return <>QuantityCounter</>;
+};
+
+export default QuantityCounter;

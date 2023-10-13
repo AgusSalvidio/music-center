@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <ItemListContainer product={guitar} />
+      <ItemListContainer item={guitar} />
     </>
   );
 }
