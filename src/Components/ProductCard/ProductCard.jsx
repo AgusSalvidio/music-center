@@ -3,7 +3,7 @@ import "./ProductCard.css";
 
 const ProductCard = (props) => {
   return (
-    <div className="row">
+    <>
       <div className="col-lg-3 col-md-6 col-sm-6 d-flex">
         <div className="card w-100 my-2">
           <div className="product-card">
@@ -24,7 +24,7 @@ const ProductCard = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
