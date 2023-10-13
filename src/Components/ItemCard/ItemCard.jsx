@@ -1,7 +1,7 @@
 import React from "react";
-import "./ProductCard.css";
+import "./ItemCard.css";
 
-const ProductCard = (props) => {
+const ItemCard = (props) => {
   return (
     <>
       <div className="col-lg-3 col-md-6 col-sm-6 d-flex">
@@ -28,4 +28,4 @@ const ProductCard = (props) => {
   );
 };
 
-export default ProductCard;
+export default ItemCard;

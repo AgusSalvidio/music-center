@@ -1,5 +1,5 @@
 import React from "react";
-import ProductCard from "../ProductCard/ProductCard";
+import ItemCard from "../ItemCard/ItemCard";
 
 const ItemListContainer = (props) => {
   return (
@@ -8,10 +8,10 @@ const ItemListContainer = (props) => {
         <div className="row">
           <div className="col-lg-12">
             <div className="row">
-              <ProductCard product={props.product} />
-              <ProductCard product={props.product} />
-              <ProductCard product={props.product} />
-              <ProductCard product={props.product} />
+              <ItemCard product={props.product} />
+              <ItemCard product={props.product} />
+              <ItemCard product={props.product} />
+              <ItemCard product={props.product} />
             </div>
           </div>
         </div>
