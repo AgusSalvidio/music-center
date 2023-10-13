@@ -13,7 +13,6 @@ const ItemCard = (props) => {
               Vista rápida
             </a>
           </div>
-
           <div className="card-body d-flex flex-column">
             <p className="card-text">{name}</p>
             <h5 className="card-title">{price}</h5>

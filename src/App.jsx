@@ -1,5 +1,6 @@
 import "./App.css";
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
+import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
 import Navbar from "./Components/Navbar/Navbar";
 
 const guitar = {
@@ -13,7 +14,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <ItemListContainer item={guitar} />
+      <ItemDetailContainer item={guitar} />
     </>
   );
 }

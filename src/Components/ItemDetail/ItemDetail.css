@@ -1,0 +1,49 @@
+.item-detail {
+  overflow: hidden;
+  position: relative;
+}
+
+.item-detail img {
+  width: 50%;
+}
+
+.btn-custom {
+  color: #fff;
+  background-color: #84734d;
+  border-color: #84734d;
+}
+
+.btn-custom:hover {
+  color: #fff;
+  background-color: #64573a;
+}
+
+.item-detail:hover img {
+  cursor: pointer;
+}
+.quick-view-btn {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  width: 60%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.item-detail:hover .quick-view-btn {
+  opacity: 1;
+}
+.item-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.item-price {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.info-section {
+  padding-left: 30px;
+  position: relative;
+  padding-right: 0;
+}
