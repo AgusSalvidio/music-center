@@ -1,18 +1,16 @@
 import React from "react";
 import ItemCard from "../ItemCard/ItemCard";
 
-const ItemListContainer = (props) => {
-  const { item } = props;
+const ItemListContainer = ({ items }) => {
   return (
     <section>
       <div className="container py-2">
         <div className="row">
           <div className="col-lg-12">
             <div className="row">
-              <ItemCard item={item} />
-              <ItemCard item={item} />
-              <ItemCard item={item} />
-              <ItemCard item={item} />
+              {items.map((item) => (
+                <ItemCard key={item.id} {...item} />
+              ))}
             </div>
           </div>
         </div>

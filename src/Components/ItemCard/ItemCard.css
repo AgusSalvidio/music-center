@@ -14,8 +14,8 @@
 }
 
 .btn-custom:hover {
-    color: #fff;
-    background-color: #64573a;
+  color: #fff;
+  background-color: #64573a;
 }
 
 .item-card:hover img {
@@ -33,4 +33,12 @@
 
 .item-card:hover .quick-view-btn {
   opacity: 1;
+}
+
+.item-card-text {
+  overflow: hidden;
+  word-break: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
