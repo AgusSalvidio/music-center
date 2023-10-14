@@ -1,10 +1,9 @@
-/* CSS for image zoom on hover */
-.product-card {
+.item-card {
   overflow: hidden;
   position: relative;
 }
 
-.product-card img {
+.item-card img {
   transition: transform 1.2s ease;
 }
 
@@ -15,11 +14,11 @@
 }
 
 .btn-custom:hover {
-    color: #fff;
-    background-color: #64573a;
+  color: #fff;
+  background-color: #64573a;
 }
 
-.product-card:hover img {
+.item-card:hover img {
   transform: scale(1.08); /* Adjust the scale factor as needed */
 }
 .quick-view-btn {
@@ -32,6 +31,14 @@
   transition: opacity 0.3s ease;
 }
 
-.product-card:hover .quick-view-btn {
+.item-card:hover .quick-view-btn {
   opacity: 1;
+}
+
+.item-card-text {
+  overflow: hidden;
+  word-break: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }

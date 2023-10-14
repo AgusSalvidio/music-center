@@ -1,0 +1,15 @@
+.item-quantity {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.btn-custom {
+  color: #fff;
+  background-color: #84734d;
+  border-color: #84734d;
+}
+
+.btn-custom:hover {
+  color: #fff;
+  background-color: #64573a;
+}

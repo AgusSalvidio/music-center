@@ -1,11 +1,21 @@
 import React from "react";
-import ProductGrid from "../ProductGrid/ProductGrid";
+import ItemCard from "../ItemCard/ItemCard";
 
-const ItemListContainer = (props) => {
+const ItemListContainer = ({ items }) => {
   return (
-    <>
-      <ProductGrid product={props.product} />
-    </>
+    <section>
+      <div className="container py-2">
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="row">
+              {items.map((item) => (
+                <ItemCard key={item.id} {...item} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
