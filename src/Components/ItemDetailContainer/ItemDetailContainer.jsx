@@ -1,13 +1,24 @@
-import React from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { getItemIdentifiedBy } from "../../asyncmock";
 
-const ItemDetailContainer = (props) => {
-  const { item } = props;
+const ItemDetailContainer = () => {
+  const [item, setItem] = useState(null);
+
+  const { itemId } = useParams();
+
+  useEffect(() => {
+    getItemIdentifiedBy(itemId)
+      .then((response) => setItem(response))
+      .catch((error) => console.log(error));
+  }, [itemId]);
+
   return (
     <section>
       <div className="container py-4">
         <div className="common-wrapper container">
-          <ItemDetail item={item} />
+          {<ItemDetail {...item} />}
         </div>
       </div>
     </section>
