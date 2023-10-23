@@ -2,8 +2,15 @@ import React from "react";
 import "./ItemDetail.css";
 import QuantityCounter from "../QuantityCounter/QuantityCounter";
 
-const ItemDetail = (props) => {
-  const { name, image, price, description } = props.item;
+const ItemDetail = ({
+  id,
+  categoryId,
+  name,
+  image,
+  price,
+  title,
+  description,
+}) => {
   return (
     <>
       <div className="row no-gutters my-4 pb-4">
@@ -33,10 +40,10 @@ const ItemDetail = (props) => {
       <div className="no-gutters my-4 pb-4">
         <div className="item-description">
           <h2 className="text-pre font-weight-bold">
-            <span>{description.title}</span>
+            <span>{title}</span>
           </h2>
           <div className="item-description-body">
-            <p>{description.body}</p>
+            <p>{description}</p>
           </div>
         </div>
       </div>
