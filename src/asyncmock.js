@@ -5,7 +5,7 @@ const items = [
     name: "Gibson SG Standard Ebony",
     image:
       "https://media.guitarcenter.com/is/image/MMGS7/L54573000002000-00-2000x2000.jpg",
-    price: "$1,799.00",
+    price: "1799.00",
     stock: "5",
     title: "Back in Black…and Heritage Cherry!",
     description:
@@ -17,7 +17,7 @@ const items = [
     name: "Gibson Les Paul Standard '50s Figured Top Electric Guitar 60s Cherry",
     image:
       "https://media.guitarcenter.com/is/image/MMGS7/L54575000005000-00-600x600.jpg",
-    price: "$2,999.00",
+    price: "2999.00",
     stock: "5",
     title: "A Classic Reborn for Today's Player",
     description:
@@ -29,7 +29,7 @@ const items = [
     name: "Fender American Professional II Telecaster Maple Fingerboard Electric Guitar Butterscotch Blonde",
     image:
       "https://media.guitarcenter.com/is/image/MMGS7/L78119000004000-00-600x600.jpg",
-    price: "$1,799.00",
+    price: "1799.00",
     stock: "5",
     title: "Fast-Playing Maple Neck",
     description:
@@ -41,7 +41,7 @@ const items = [
     name: "Gretsch Guitars G6136T-59 Vintage Select Edition '59 Falcon Hollowbody With Bigsby Vintage White",
     image:
       "https://media.guitarcenter.com/is/image/MMGS7/J32895000001000-00-600x600.jpg",
-    price: "$3,999.99",
+    price: "3999.99",
     stock: "5",
     title: "Period-Correct Specs Channel the Golden Age",
     description:
@@ -53,7 +53,7 @@ const items = [
     name: "Fender Tone Master FR-12 1,000W 1x12 FRFR Powered Speaker Cab Black",
     image:
       "https://media.guitarcenter.com/is/image/MMGS7/M05115000001000-00-600x600.jpg",
-    price: "$549.99",
+    price: "549.99",
     stock: "5",
     title: "Fender Tone Master",
     description:
@@ -65,7 +65,7 @@ const items = [
     name: "Marshall DSL20CR 20W 1x12 Tube Guitar Combo Amp",
     image:
       "https://media.guitarcenter.com/is/image/MMGS7/K64637000000000-00-600x600.jpg",
-    price: "$799.99",
+    price: "799.99",
     stock: "5",
     title: "Marshall DSL20CR",
     description:
@@ -77,7 +77,7 @@ const items = [
     name: "VOX Custom AC15C1 15W 1x12 Tube Guitar Combo Amp Vintage",
     image:
       "https://media.guitarcenter.com/is/image/MMGS7/423619000001000-00-600x600.jpg",
-    price: "$799.99",
+    price: "799.99",
     stock: "5",
     title: "VOX Custom AC15C1",
     description:
@@ -89,7 +89,7 @@ const items = [
     name: "Roland JC-40 40W 2x10 Jazz Chorus Guitar Combo Amp",
     image:
       "https://media.guitarcenter.com/is/image/MMGS7/J24857000000000-00-600x600.jpg",
-    price: "$699.99",
+    price: "699.99",
     stock: "5",
     title: "Roland JC-40",
     description: `he Roland JC-40 Jazz Chorus combo amplifier is a 40-watt, 2x10" stereo combo delivers Roland's renowned "JC clean" tone and signature Dimensional Space Chorus effect in a scaled-down design ideal for gigging and rehearsing. Like the legendary JC-120, the JC-40 serves up punchy, spacious sound through two independent power amps and custom speakers. Its durable, road-tested build ensures years of reliability on stage and in the studio.`,
@@ -100,7 +100,7 @@ const items = [
     name: "BOSS DS-1 Distortion Pedal",
     image:
       "https://media.guitarcenter.com/is/image/MMGS7/151258000000000-00-600x600.jpg",
-    price: "$62.99",
+    price: "62.99",
     stock: "10",
     title: "BOSS DS-1",
     description:
@@ -112,7 +112,7 @@ const items = [
     name: "Dunlop Original Cry Baby Wah Effects Pedal",
     image:
       "https://media.guitarcenter.com/is/image/MMGS7/151000000000000-00-600x600.jpg",
-    price: "$99.99",
+    price: "99.99",
     stock: "10",
     title: "Dunlop Original Cry Baby",
     description:
@@ -124,7 +124,7 @@ const items = [
     name: "GAMMA Hades Metal Distortion Effects Pedal",
     image:
       "https://media.guitarcenter.com/is/image/MMGS7/L98279000000000-00-600x600.jpg",
-    price: "$79.99",
+    price: "79.99",
     stock: "10",
     title: "GAMMA Hades Metal Distortion",
     description:
@@ -136,7 +136,7 @@ const items = [
     name: "BOSS RV-6 Digital Delay/Reverb Guitar Effects Pedal",
     image:
       "https://media.guitarcenter.com/is/image/MMGS7/J24859000000000-00-600x600.jpg",
-    price: "$149.99",
+    price: "149.99",
     stock: "10",
     title: "BOSS RV-6 Digital Delay/Reverb",
     description:
@@ -148,7 +148,7 @@ const items = [
     name: "Ernie Ball Regular Slinky 2221 (10-46) Nickel Wound Electric Guitar Strings",
     image:
       "https://media.guitarcenter.com/is/image/MMGS7/100622000000000-00-600x600.jpg",
-    price: "$6.99",
+    price: "6.99",
     stock: "10",
     title: "Ernie Ball Regular Slinky",
     description:
@@ -160,7 +160,7 @@ const items = [
     name: "Musician's Gear Deluxe Electric Guitar Case Tweed",
     image:
       "https://media.guitarcenter.com/is/image/MMGS7/540948000389000-00-600x600.jpg",
-    price: "$119.99",
+    price: "119.99",
     stock: "10",
     title: "Deluxe Electric Guitar Case Tweed",
     description:
@@ -172,7 +172,7 @@ const items = [
     name: "Fender 351 Premium Celluloid Guitar Picks 12-Pack Blue Moto X-Heavy",
     image:
       "https://media.guitarcenter.com/is/image/MMGS7/110556000004001-00-600x600.jpg",
-    price: "$4.99",
+    price: "4.99",
     stock: "10",
     title: "Fender 351 Premium Celluloid Guitar Picks",
     description:
@@ -184,7 +184,7 @@ const items = [
     name: "Fender Deluxe Series Straight to Straight Instrument Cable 5 ft. Yellow Tweed",
     image:
       "https://media.guitarcenter.com/is/image/MMGS7/L47910000001002-00-600x600.jpg",
-    price: "$27.99",
+    price: "27.99",
     stock: "10",
     title: "Fender Deluxe Series",
     description:

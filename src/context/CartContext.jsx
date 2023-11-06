@@ -1,16 +1,15 @@
-import React from "react";
 import { useState, createContext } from "react";
 
 export const CartContext = createContext({
   cart: [],
   total: 0,
-  totalAmount: 0,
+  totalQuantity: 0,
 });
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState(0);
-  const [totalAmount, setTotalAmount] = useState(0);
+  const [totalQuantity, setTotalQuantity] = useState(0);
 
   console.log(cart);
 
@@ -30,7 +29,7 @@ export const CartProvider = ({ children }) => {
         }
       });
     }
-    setTotalAmount((prev) => prev + quantity);
+    setTotalQuantity((prev) => prev + quantity);
     setTotal((prev) => prev + item.price * quantity);
   };
 
@@ -39,7 +38,7 @@ export const CartProvider = ({ children }) => {
     const updatedCart = cart.filter((prod) => prod.item.id !== id);
 
     setCart(updatedCart);
-    setTotalAmount((prev) => prev - productToRemove.quantity);
+    setTotalQuantity((prev) => prev - productToRemove.quantity);
     setTotal(
       (prev) => prev - productToRemove.item.price * productToRemove.quantity
     );
@@ -47,13 +46,20 @@ export const CartProvider = ({ children }) => {
 
   const clearCart = () => {
     setCart([]);
-    setTotalAmount(0);
+    setTotalQuantity(0);
     setTotal(0);
   };
 
   return (
     <CartContext.Provider
-      value={{ cart, total, totalAmount, addProduct, removeProduct, clearCart }}
+      value={{
+        cart,
+        total,
+        totalQuantity,
+        addProduct,
+        removeProduct,
+        clearCart,
+      }}
     >
       {children}
     </CartContext.Provider>
