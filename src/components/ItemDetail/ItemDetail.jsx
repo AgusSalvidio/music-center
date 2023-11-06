@@ -1,6 +1,9 @@
 import React from "react";
 import "./ItemDetail.css";
 import QuantityCounter from "../QuantityCounter/QuantityCounter";
+import { useState, useContext } from "react";
+import { Link } from "react-router-dom";
+import { CartContext } from "../../context/CartContext";
 
 const ItemDetail = ({
   id,
@@ -8,9 +11,18 @@ const ItemDetail = ({
   name,
   image,
   price,
+  stock,
   title,
   description,
 }) => {
+  const [addQuantity, setAddQuantity] = useState(0);
+  const { addProduct } = useContext(CartContext);
+
+  const quantityHandler = (quantity) => {
+    setAddQuantity(quantity);
+    const item = { id, name, price };
+    addProduct(item, quantity);
+  };
   return (
     <>
       <div className="row no-gutters my-4 pb-4">
@@ -26,14 +38,15 @@ const ItemDetail = ({
           <hr></hr>
           <div>
             <h5 className="item-price">{price}</h5>
-            <div className="d-flex">
-              <QuantityCounter />
-            </div>
-            <div className="pt-3">
-              <a href="#!" className="btn btn-custom shadow-0 me-1 w-100">
-                Agregar al Carrito
-              </a>
-            </div>
+            {addQuantity > 0 ? (
+              <Link to="/cart">Terminar compra</Link>
+            ) : (
+              <QuantityCounter
+                start={1}
+                stock={stock}
+                addProduct={quantityHandler}
+              />
+            )}
           </div>
         </div>
       </div>

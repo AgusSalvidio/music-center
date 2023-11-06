@@ -1,4 +1,3 @@
-import React from "react";
 import musicCenterLogo from "../../assets/logos/logo.png";
 import CartWidget from "../CartWidget/CartWidget";
 import { useState, useEffect } from "react";
@@ -101,7 +100,13 @@ const Navbar = () => {
             </ul>
             <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li className="nav-item">
-                <CartWidget />
+                <NavLink
+                  to="/cart"
+                  onClick={() => handlePageTitle("Carrito")}
+                  className="nav-link"
+                >
+                  <CartWidget />
+                </NavLink>
               </li>
             </ul>
           </div>
