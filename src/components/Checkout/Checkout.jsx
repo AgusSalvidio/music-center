@@ -1,7 +1,7 @@
 import { useState, createContext, useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { db } from "../../services/config";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, updateDoc, doc, getDoc } from "firebase/firestore";
 
 const Checkout = () => {
   const [name, setName] = useState("");
@@ -39,10 +39,24 @@ const Checkout = () => {
       phone,
       email,
     };
-    addDoc(collection(db, "orders"), order)
-      .then((docRef) => {
-        setOrderId(docRef.id);
-        clearCart();
+
+    Promise.all(
+      order.items.map(async (orderProduct) => {
+        const productRef = doc(db, "inventory", orderProduct.id);
+        const docProduct = await getDoc(productRef);
+        const currentStock = docProduct.data().stock;
+        await updateDoc(productRef, {
+          stock: currentStock - orderProduct.quantity,
+        });
+      })
+    )
+      .then(() => {
+        addDoc(collection(db, "orders"), order)
+          .then((docRef) => {
+            setOrderId(docRef.id);
+            clearCart();
+          })
+          .catch((error) => console.log(error));
       })
       .catch((error) => console.log(error));
   };
