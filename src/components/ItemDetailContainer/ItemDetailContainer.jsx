@@ -1,7 +1,8 @@
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getItemIdentifiedBy } from "../../asyncmock";
+import { db } from "../../services/config";
+import { getDoc, doc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
   const [item, setItem] = useState(null);
@@ -9,8 +10,13 @@ const ItemDetailContainer = () => {
   const { itemId } = useParams();
 
   useEffect(() => {
-    getItemIdentifiedBy(itemId)
-      .then((response) => setItem(response))
+    const foundItem = doc(db, "inventory", itemId);
+    getDoc(foundItem)
+      .then((response) => {
+        const data = response.data();
+        const newItem = { id: response.id, ...data };
+        setItem(newItem);
+      })
       .catch((error) => console.log(error));
   }, [itemId]);
 

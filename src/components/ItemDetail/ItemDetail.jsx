@@ -37,7 +37,9 @@ const ItemDetail = ({
           </div>
           <hr></hr>
           <div>
-            <h5 className="item-price">{price}</h5>
+            <h5 className="item-price">${price}</h5>
+            <strong className="item-quantity">Stock: {stock}</strong>
+            <hr></hr>
             {addQuantity > 0 ? (
               <Link to="/cart">Terminar compra</Link>
             ) : (

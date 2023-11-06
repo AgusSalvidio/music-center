@@ -18,7 +18,7 @@ const ItemCard = ({ name, image, price, id }) => {
           <div className="card-body d-flex flex-column">
             <p className="item-card-text text-justify">{name}</p>
           </div>
-          <h5 className="card-title p-3 mb-4">{price}</h5>
+          <h5 className="card-title p-3 mb-4">${price}</h5>
         </div>
       </div>
     </>
