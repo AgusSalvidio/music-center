@@ -2,7 +2,24 @@
 
 <img src="src/assets/logos/logo.png" alt="Logo" width="300" height="100">
 
-Music center is the new musical instruments retailer in Argentina. Musical Instruments and Sound Equipment.
+Music Center is an e-commerce project used for Coderhouse React course. The application allows you to view a list of products and make online purchases. Products and purchase orders are stored in Firebase.
+
+## Frameworks 🏗️
+- Vite
+- React
+- React Router
+- Firebase
+
+## Features 📜
+- View available products list
+- Add products to shopping cart
+- View shopping cart
+- Place a purchase order
+
+## Installation 🔧
+
+To load the project on your local machine follow these [instructions](docs/how-to/how-to-load-on-local-machine.md).
+
 
 ## Quick links 🚀
 
