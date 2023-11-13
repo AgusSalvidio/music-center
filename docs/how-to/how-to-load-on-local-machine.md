@@ -10,7 +10,7 @@
 
 ## Firebase Configuration
 
-### To use Firebase in this application, you must follow the following steps:
+### To use Firebase in this application, you must follow these steps:
 
 1. Create an account on Firebase and create a new project.
 2. In the *Authentication* section of Firebase, enable the email and password authentication.
