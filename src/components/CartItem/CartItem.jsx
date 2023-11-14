@@ -5,7 +5,6 @@ import "./CartItem.css";
 const CartItem = ({ item, quantity }) => {
   const { removeProduct } = useContext(CartContext);
 
-  console.log(item);
   return (
     <>
       <div className="d-flex align-items-start col-12">
