@@ -2,16 +2,27 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import CartItem from "../CartItem/CartItem";
+import cartIcon from "../../assets/cart-icon.svg";
 
 const Cart = () => {
   const { cart, clearCart, total, totalQuantity } = useContext(CartContext);
 
   if (totalQuantity === 0) {
     return (
-      <>
-        <h2>No hay productos</h2>
-        <Link to="/">Ver productos</Link>
-      </>
+      <div className="container py-5 text-center">
+        <img src={cartIcon}></img>
+        <h2>El carrito está vacío</h2>
+        <div className="pt-3">
+          <Link to="/">
+            <button
+              onClick={() => addProduct(quantityCounter)}
+              className="btn btn-custom shadow-0 me-1 w-50"
+            >
+              Continuar Comprando
+            </button>
+          </Link>
+        </div>
+      </div>
     );
   } else {
     return (

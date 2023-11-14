@@ -54,3 +54,6 @@
   font-size: 16px;
   text-align: justify;
 }
+.purchase-button-box {
+  justify-content: space-evenly;
+}
