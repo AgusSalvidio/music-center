@@ -11,9 +11,6 @@ const ItemCard = ({ name, image, price, id }) => {
             <Link to={`/item/${id}`}>
               <img src={image} className="card-img-top" />
             </Link>
-            {/* <button className="btn btn-custom quick-view-btn">
-              Vista rápida
-            </button> */}
           </div>
           <div className="card-body d-flex flex-column">
             <p className="item-card-text text-justify">{name}</p>

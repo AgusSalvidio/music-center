@@ -19,7 +19,7 @@ const ItemDetail = ({
 
   const quantityHandler = (quantity) => {
     setAddQuantity(quantity);
-    const item = { id, name, price };
+    const item = { id, name, image, price };
     addProduct(item, quantity);
   };
   return (
