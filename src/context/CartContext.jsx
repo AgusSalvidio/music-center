@@ -11,8 +11,6 @@ export const CartProvider = ({ children }) => {
   const [total, setTotal] = useState(0);
   const [totalQuantity, setTotalQuantity] = useState(0);
 
-  console.log(cart);
-
   const addProduct = (item, quantity) => {
     const hasProductAlreadyBeenAdded = cart.find(
       (prod) => prod.item.id === item.id

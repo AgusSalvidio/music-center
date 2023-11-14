@@ -1,4 +1,3 @@
-import React from "react";
 import "./ItemDetail.css";
 import QuantityCounter from "../QuantityCounter/QuantityCounter";
 import { useState, useContext } from "react";
@@ -20,7 +19,7 @@ const ItemDetail = ({
 
   const quantityHandler = (quantity) => {
     setAddQuantity(quantity);
-    const item = { id, name, price };
+    const item = { id, name, image, price };
     addProduct(item, quantity);
   };
   return (
@@ -41,7 +40,18 @@ const ItemDetail = ({
             <strong className="item-quantity">Stock: {stock}</strong>
             <hr></hr>
             {addQuantity > 0 ? (
-              <Link to="/cart">Terminar compra</Link>
+              <div className="d-flex purchase-button-box">
+                <Link to="/">
+                  <button className="btn btn-custom shadow-0 me-1 w-100">
+                    Continuar Comprando
+                  </button>
+                </Link>
+                <Link to="/cart">
+                  <button className="btn btn-custom shadow-0 me-1 w-100">
+                    Finalizar Compra
+                  </button>
+                </Link>
+              </div>
             ) : (
               <QuantityCounter
                 start={1}
