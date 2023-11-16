@@ -26,6 +26,7 @@ export const CartProvider = ({ children }) => {
           return prod;
         }
       });
+      setCart(updatedCart);
     }
     setTotalQuantity((prev) => prev + quantity);
     setTotal((prev) => prev + item.price * quantity);
