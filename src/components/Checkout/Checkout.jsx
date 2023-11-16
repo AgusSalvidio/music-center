@@ -4,6 +4,7 @@ import { db } from "../../services/config";
 import { collection, addDoc, updateDoc, doc, getDoc } from "firebase/firestore";
 import "./Checkout.css";
 import Swal from "sweetalert2";
+import { trackPromise } from "react-promise-tracker";
 
 const Checkout = () => {
   const [name, setName] = useState("");
@@ -66,24 +67,26 @@ const Checkout = () => {
       email,
     };
 
-    Promise.all(
-      order.items.map(async (orderProduct) => {
-        const productRef = doc(db, "inventory", orderProduct.id);
-        const docProduct = await getDoc(productRef);
-        const currentStock = docProduct.data().stock;
-        await updateDoc(productRef, {
-          stock: currentStock - orderProduct.quantity,
-        });
-      })
-    )
-      .then(() => {
-        addDoc(collection(db, "orders"), order)
-          .then((docRef) => {
-            renderPurchaseOrderNotification(docRef.id);
-          })
-          .catch((error) => console.log(error));
-      })
-      .catch((error) => console.log(error));
+    trackPromise(
+      Promise.all(
+        order.items.map(async (orderProduct) => {
+          const productRef = doc(db, "inventory", orderProduct.id);
+          const docProduct = await getDoc(productRef);
+          const currentStock = docProduct.data().stock;
+          await updateDoc(productRef, {
+            stock: currentStock - orderProduct.quantity,
+          });
+        })
+      )
+        .then(() => {
+          addDoc(collection(db, "orders"), order)
+            .then((docRef) => {
+              renderPurchaseOrderNotification(docRef.id);
+            })
+            .catch((error) => console.log(error));
+        })
+        .catch((error) => console.log(error))
+    );
   };
 
   return (

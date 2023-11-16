@@ -7,6 +7,7 @@ import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailCont
 import { CartProvider } from "./context/CartContext";
 import Cart from "./components/Cart/Cart";
 import Checkout from "./components/Checkout/Checkout";
+import LoadingSpinner from "./components/LoadingSpinner/LoadingSpinner";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <BrowserRouter>
         <CartProvider>
           <Navbar />
+          <LoadingSpinner />
           <Routes>
             <Route path="/" element={<ItemListContainer />} />
             <Route
