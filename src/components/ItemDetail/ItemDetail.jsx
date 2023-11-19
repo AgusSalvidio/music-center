@@ -15,7 +15,15 @@ const ItemDetail = ({
   description,
 }) => {
   const [addQuantity, setAddQuantity] = useState(0);
-  const { addProduct } = useContext(CartContext);
+  const { addProduct, cart } = useContext(CartContext);
+
+  const currentSelectedQuantity = cart.find(
+    (prod) => prod.item.id === id
+  )?.quantity;
+
+  const currentStock =
+    stock -
+    (currentSelectedQuantity != undefined ? currentSelectedQuantity : 0);
 
   const quantityHandler = (quantity) => {
     setAddQuantity(quantity);
@@ -37,9 +45,9 @@ const ItemDetail = ({
           <hr></hr>
           <div>
             <h5 className="item-price">${price}</h5>
-            {stock > 0 ? (
+            {currentStock > 0 ? (
               <>
-                <strong className="item-quantity">Stock: {stock}</strong>
+                <strong className="item-quantity">Stock: {currentStock}</strong>
                 <hr></hr>
                 {addQuantity > 0 ? (
                   <div className="d-flex purchase-button-box">
@@ -57,7 +65,7 @@ const ItemDetail = ({
                 ) : (
                   <QuantityCounter
                     start={1}
-                    stock={stock}
+                    stock={currentStock}
                     addProduct={quantityHandler}
                   />
                 )}
