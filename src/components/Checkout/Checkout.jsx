@@ -132,6 +132,14 @@ const Checkout = () => {
                       value: true,
                       message: "Teléfono es requerido",
                     },
+                    pattern: {
+                      value: /^[0-9]*$/,
+                      message: "Teléfono no válido",
+                    },
+                    minLength: {
+                      value: 8,
+                      message: "Teléfono debe ser mayor a 8 digitos",
+                    },
                   })}
                 />
                 {errors.phone && (
@@ -151,6 +159,10 @@ const Checkout = () => {
                     required: {
                       value: true,
                       message: "Documento es requerido",
+                    },
+                    pattern: {
+                      value: /^[0-9]*$/,
+                      message: "Documento no válido",
                     },
                   })}
                 />
