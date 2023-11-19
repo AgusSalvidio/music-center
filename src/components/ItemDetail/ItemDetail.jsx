@@ -37,27 +37,36 @@ const ItemDetail = ({
           <hr></hr>
           <div>
             <h5 className="item-price">${price}</h5>
-            <strong className="item-quantity">Stock: {stock}</strong>
-            <hr></hr>
-            {addQuantity > 0 ? (
-              <div className="d-flex purchase-button-box">
-                <Link to="/">
-                  <button className="btn btn-custom shadow-0 me-1 w-100">
-                    Continuar Comprando
-                  </button>
-                </Link>
-                <Link to="/cart">
-                  <button className="btn btn-custom shadow-0 me-1 w-100">
-                    Finalizar Compra
-                  </button>
-                </Link>
-              </div>
+            {stock > 0 ? (
+              <>
+                <strong className="item-quantity">Stock: {stock}</strong>
+                <hr></hr>
+                {addQuantity > 0 ? (
+                  <div className="d-flex purchase-button-box">
+                    <Link to="/">
+                      <button className="btn btn-custom shadow-0 me-1 w-100">
+                        Continuar Comprando
+                      </button>
+                    </Link>
+                    <Link to="/cart">
+                      <button className="btn btn-custom shadow-0 me-1 w-100">
+                        Finalizar Compra
+                      </button>
+                    </Link>
+                  </div>
+                ) : (
+                  <QuantityCounter
+                    start={1}
+                    stock={stock}
+                    addProduct={quantityHandler}
+                  />
+                )}
+              </>
             ) : (
-              <QuantityCounter
-                start={1}
-                stock={stock}
-                addProduct={quantityHandler}
-              />
+              <>
+                <hr></hr>
+                <strong className="item-quantity">No hay stock</strong>
+              </>
             )}
           </div>
         </div>
