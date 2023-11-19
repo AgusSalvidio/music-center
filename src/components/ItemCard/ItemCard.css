@@ -42,3 +42,26 @@
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
+.stock-badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #84734d;
+  color: white;
+  padding: 0px 3px;
+  border-radius: 5px;
+  margin: 0;
+  display: inline-flex;
+}
+
+.out-of-stock-badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: grey;
+  color: white;
+  padding: 0px 3px;
+  border-radius: 5px;
+  margin: 0;
+  display: inline-flex;
+}
