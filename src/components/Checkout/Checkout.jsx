@@ -225,8 +225,11 @@ const Checkout = () => {
           <div>
             <h5 className="mb-2 pb-2 border-bottom">Resumen Carrito</h5>
             {cart.map((product) => (
-              <div className="row no-gutters my-1 align-items-top border-bottom py-2">
-                <div className="col-2" key={product.item.id}>
+              <div
+                className="row no-gutters my-1 align-items-top border-bottom py-2"
+                key={product.item.id}
+              >
+                <div className="col-2">
                   <img
                     src={product.item.image}
                     className="img-small-thumbnail"

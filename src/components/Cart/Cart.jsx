@@ -46,7 +46,7 @@ const Cart = () => {
           <div className="col-12 col-md-8">
             <div className="row pb-2">
               {cart.map((product) => (
-                <CartItem key={product.id} {...product} />
+                <CartItem key={product.item.id} {...product} />
               ))}
             </div>
             <div className="text-center">

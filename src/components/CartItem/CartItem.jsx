@@ -17,9 +17,6 @@ const CartItem = ({ item, quantity }) => {
           <p>${item.price}</p>
         </div>
       </div>
-      {/* <div className="col-6 col-md-4 col-lg-3 offset-md-3">
-        <button className="btn btn-custom shadow-0 me-1 w-100">Contador </button>
-      </div> */}
       <div className="col-6 col-md-4 col-lg-4 offset-md-4 py-3">
         <button
           className="btn btn-custom shadow-0 me-1 w-100"
