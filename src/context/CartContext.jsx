@@ -49,6 +49,16 @@ export const CartProvider = ({ children }) => {
     setTotal(0);
   };
 
+  const productIdentifiedBy = (id) => {
+    return cart.find((prod) => prod.item.id === id);
+  };
+
+  const currentSelectedQuantity = (anId) => {
+    const currentProduct = productIdentifiedBy(anId);
+    const currentSelectedQuantity = currentProduct?.quantity;
+    return currentSelectedQuantity != undefined ? currentSelectedQuantity : 0;
+  };
+
   return (
     <CartContext.Provider
       value={{
@@ -58,6 +68,8 @@ export const CartProvider = ({ children }) => {
         addProduct,
         removeProduct,
         clearCart,
+        currentSelectedQuantity,
+        productIdentifiedBy,
       }}
     >
       {children}

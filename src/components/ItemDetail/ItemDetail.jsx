@@ -15,19 +15,15 @@ const ItemDetail = ({
   description,
 }) => {
   const [addQuantity, setAddQuantity] = useState(0);
-  const { addProduct, cart } = useContext(CartContext);
+  const { addProduct, currentSelectedQuantity, productIdentifiedBy } =
+    useContext(CartContext);
 
-  const currentSelectedQuantity = cart.find(
-    (prod) => prod.item.id === id
-  )?.quantity;
-
-  const currentStock =
-    stock -
-    (currentSelectedQuantity != undefined ? currentSelectedQuantity : 0);
+  const currentQuantity = currentSelectedQuantity(id);
+  const currentStock = stock - currentQuantity;
 
   const quantityHandler = (quantity) => {
     setAddQuantity(quantity);
-    const item = { id, name, image, price };
+    const item = { id, name, image, price, stock };
     addProduct(item, quantity);
   };
   return (

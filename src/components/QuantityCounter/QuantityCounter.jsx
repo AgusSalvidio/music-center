@@ -11,7 +11,7 @@ const QuantityCounter = ({ start, stock, addProduct }) => {
     }
   };
   const decreaseCounter = () => {
-    if (quantityCounter > start) {
+    if (quantityCounter > start && quantityCounter > 0) {
       setQuantityCounter(quantityCounter - 1);
     }
   };
